@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming & Selling Laptop Website</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #00ff62;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .welcome {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f1f1f1;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+        }
+
+        .menu-item {
+            text-align: center;
+        }
+
+        .order, .gallery, .testimonials, .payment {
+            text-align: center;
+            padding: 50px;
+            background-color: #f1f1f1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #00ff22;
+            color: white;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-item {
+                margin-bottom: 20px;
+            }
+
+            header nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Programming & Selling Laptop Website</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="#order">Order laptops</a>
+        </nav>
+    </header>
+
+    <section class="welcome">
+        <h2>Welcome to the best Computers Selling Web and Programming!</h2>
+        <p>We sell laptops of 64bit Operating System. And Teach you how to Program/Code!</p>
+    </section>
+
+    <section class="profile"></section>
+        <h2>my profile pictures</h2>
+        <div class="menu-picture">
+            <img src="profile picture.jpg" alt="profile" width="300px">
+    <section class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <img src="laptops.png" alt="laptop" width="300px">
+            <h3>laptop price </h3>
+                    <h3>laptop price </h3>
+            <p>Get your accurate laptops here,we have HP,LENOVO,DELL,ASUS.
+                The best part is each laptop you buy come with a Aitel sim card.
+                And a 300GB data free.</p>
+            <p>₦ each15000</p>
+        </div>
+        <div class="menu-item">
+            <img src="laptop.png" alt="programing" width="300px">
+            <h3>programming lesson</h3>
+            <p>To learn how to program in CSS,Python,Javascript etc.</p>
+            <p>₦2000 per lesson</p>
+        </div>
+    </section>
+
+    <section id="order" class="order">
+        <h2>Order Now</h2>
+        <p>Fill out the form below to place your order:</p>
+        <form id="orderForm">
+            <label for="profile name">profile Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="order">Order Details:</label>
+            <textarea id="order" name="order" rows="4" required></textarea>
+            
+            <button type="submit offer">Submit offer</button>
+        </form>
+        <div id="thankYouMessage" style="display: none;">
+            <h3>Thank you for your message!</h3>
+            <p>We will send your offer.</p>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Hide the form and show the thank-you message
+            document.getElementById('orderForm').style.display = 'none';
+            document.getElementById('thankYouMessage').style.display = 'block';
+        });
+    </script>
+
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-item">
+            <img src="laptop.png" alt="laptops" width="300px">
+        </div>
+        <div class="gallery-item">
+            <img src="programming.png" alt="proogramming" width="300px">
+        </div>
+        <!-- Add more images as needed -->
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <blockquote>
+            <p>"I would want to Attend your Programming Lessons!" - Abdulwaheed</p>
+        </blockquote>
+        <blockquote>
+            <p>"I would like to Buy a Laptop!" - Sadeeq</p>
+        </blockquote>
+    </section>
+
+    <section class="payment">
+        <h2>Make a Payment</h2>
+        <form action="https://www.Abdulsad.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="Abdulwaheedabw123@gmail.com">
+            <input type="hidden" name="item_name" value="laptops">
+            <input type="hidden" name="amount" value="45000">
+            <input type="hidden" name="currency_code" value="NGN">
+            <input type="hidden" name="item_name" value="programming">
+            <input type="hidden" name="amount" value="2000">
+            <input type="hidden" name="currency_code" value="NGN">
+            <input type="image" src="https://www.Abdulasadobjects.com/en_US/i/btn/btn_buynow_AS.gif" border="0" name="submit" alt="Abdulsad - The safer, easier way to pay on web!">
+            <img alt="" border="0" src="https://www.Abdulasadobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </section>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <footer>
+        <p>&copy; 2024 computers & programming. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://youtube.com/Abdulwaheed" target="_blank">youtube</a>
+        </div>
+    </footer>
+</body>
+</html>
